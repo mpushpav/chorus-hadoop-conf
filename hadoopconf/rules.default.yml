@@ -1,0 +1,10 @@
+# Sifts out the following 3 properties specifically
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.scheduler.address'}
+- {property: 'name', rule: '==', value: 'yarn.app.mapreduce.am.staging-dir'}
+- {property: 'name', rule: '==', value: 'mapreduce.jobhistory.address'}
+
+# Adds all:
+#- {property: 'name', rule: '!=', value: '-1'}
+
+# Adds only those from "source" == 'mapred-default.xml'
+#- {property: 'source', rule: '==', value: 'mapred-default.xml' }
