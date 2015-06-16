@@ -1,5 +1,4 @@
 require 'active_model'
-require 'nokogiri'
 require 'httparty'
 require 'yaml'
 
@@ -11,7 +10,9 @@ class HadoopConfig
 
   ALLOWED_RULE_OPERATORS = {
       '==' => ->(a,b) { a == b },
-      '!=' => ->(a,b) { a != b }
+      '!=' => ->(a,b) { a != b },
+      '=~' => ->(a,b) { a =~ eval(b) },
+      '!~' => ->(a,b) { (a =~ eval(b)).nil? }
   }
 
   def initialize(h)
@@ -55,7 +56,7 @@ class HadoopConfig
     filtered_results.to_a.sort_by { |a| a["name"] }
   rescue Exception => e
     errors.add(:base, e.message)
-    puts e.backtrace
+    # puts e.backtrace
     nil
   end
 

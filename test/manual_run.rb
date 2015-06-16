@@ -1,4 +1,4 @@
-require 'hadoopconf/hadoop_conf'
+require '../hadoopconf/hadoop_conf'
 
 HADOOP_SERVER_IP='10.0.0.146'
 HADOOP_SERVER_PORT=8088

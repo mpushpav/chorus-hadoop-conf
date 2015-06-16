@@ -94,6 +94,25 @@ describe HadoopConfig do
         ])
         pr.length.must_be :>, 0
         (pr.select { |p| p['source'] == 'mapred-default.xml' }).length.must_equal 0
+
+        # Try getting all that match a certain regex string
+        pr = t.properties([
+                              { 'property' => 'source',
+                                'rule'     => '=~',
+                                'value'    => '/-default\.xml/' }
+                          ])
+        pr.length.must_be :>, 0
+        (pr.select { |p| p['source'] =~ /\-default\.xml/ }).length.must_equal pr.length
+
+        # Try getting all that don't match a certain regex string
+        pr = t.properties([
+                              { 'property' => 'source',
+                                'rule'     => '!~',
+                                'value'    => '/-default\.xml/' }
+                          ])
+        pr.length.must_be :>, 0
+        (pr.select { |p| (p['source'] =~ /\-default\.xml/).nil? }).length.must_equal pr.length
+
       end
     end
   end
