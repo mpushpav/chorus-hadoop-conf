@@ -25,24 +25,14 @@
 # The union of matching properties using the rules below is returned.
 #
 # Default:
-# Sifts out the following 35 properties specifically
-- {property: 'name', rule: '==', value: 'alpine.keytab'}
-- {property: 'name', rule: '==', value: 'alpine.principal'}
+# Sifts out the following properties specifically
 - {property: 'name', rule: '==', value: 'dfs.client.failover.proxy.provider.nameservice1'}
 - {property: 'name', rule: '==', value: 'dfs.datanode.kerberos.principal'}
 - {property: 'name', rule: '==', value: 'dfs.datanode.keytab.file'}
 - {property: 'name', rule: '==', value: 'dfs.ha.automatic-failover.enabled.nameservice1'}
 - {property: 'name', rule: '==', value: 'dfs.ha.namenodes.nameservice1'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.http-address.nameservice1.namenode411'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.http-address.nameservice1.namenode434'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.https-address.nameservice1.namenode411'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.https-address.nameservice1.namenode434'}
 - {property: 'name', rule: '==', value: 'dfs.namenode.kerberos.principal'}
 - {property: 'name', rule: '==', value: 'dfs.namenode.keytab.file'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.rpc-address.nameservice1.namenode411'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.rpc-address.nameservice1.namenode434'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.servicerpc-address.nameservice1.namenode411'}
-- {property: 'name', rule: '==', value: 'dfs.namenode.servicerpc-address.nameservice1.namenode434'}
 - {property: 'name', rule: '==', value: 'dfs.nameservices'}
 - {property: 'name', rule: '==', value: 'dfs.replication'}
 - {property: 'name', rule: '==', value: 'ha.zookeeper.quorum'}
