@@ -25,10 +25,42 @@
 # The union of matching properties using the rules below is returned.
 #
 # Default:
-# Sifts out the following 3 properties specifically
-- {property: 'name', rule: '==', value: 'yarn.resourcemanager.scheduler.address'}
-- {property: 'name', rule: '==', value: 'yarn.app.mapreduce.am.staging-dir'}
+# Sifts out the following 35 properties specifically
+- {property: 'name', rule: '==', value: 'alpine.keytab'}
+- {property: 'name', rule: '==', value: 'alpine.principal'}
+- {property: 'name', rule: '==', value: 'dfs.client.failover.proxy.provider.nameservice1'}
+- {property: 'name', rule: '==', value: 'dfs.datanode.kerberos.principal'}
+- {property: 'name', rule: '==', value: 'dfs.datanode.keytab.file'}
+- {property: 'name', rule: '==', value: 'dfs.ha.automatic-failover.enabled.nameservice1'}
+- {property: 'name', rule: '==', value: 'dfs.ha.namenodes.nameservice1'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.http-address.nameservice1.namenode411'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.http-address.nameservice1.namenode434'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.https-address.nameservice1.namenode411'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.https-address.nameservice1.namenode434'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.kerberos.principal'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.keytab.file'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.rpc-address.nameservice1.namenode411'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.rpc-address.nameservice1.namenode434'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.servicerpc-address.nameservice1.namenode411'}
+- {property: 'name', rule: '==', value: 'dfs.namenode.servicerpc-address.nameservice1.namenode434'}
+- {property: 'name', rule: '==', value: 'dfs.nameservices'}
+- {property: 'name', rule: '==', value: 'dfs.replication'}
+- {property: 'name', rule: '==', value: 'ha.zookeeper.quorum'}
+- {property: 'name', rule: '==', value: 'hadoop.rpc.protection'}
+- {property: 'name', rule: '==', value: 'hadoop.security.authentication'}
+- {property: 'name', rule: '==', value: 'mapred.child.java.opts'}
 - {property: 'name', rule: '==', value: 'mapreduce.jobhistory.address'}
+- {property: 'name', rule: '==', value: 'mapreduce.jobhistory.keytab.file'}
+- {property: 'name', rule: '==', value: 'mapreduce.jobhistory.principal'}
+- {property: 'name', rule: '==', value: 'mapreduce.jobhistory.webapp.address'}
+- {property: 'name', rule: '==', value: 'mapreduce.reduce.java.opts'}
+- {property: 'name', rule: '==', value: 'mapreduce.reduce.memory.mb'}
+- {property: 'name', rule: '==', value: 'yarn.app.mapreduce.am.staging-dir'}
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.admin.address'}
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.keytab.file'}
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.principal'}
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.resource-tracker.address'}
+- {property: 'name', rule: '==', value: 'yarn.resourcemanager.scheduler.address'}
 
 # Other examples:
 # Adds all (because matches anything)
