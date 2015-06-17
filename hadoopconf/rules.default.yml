@@ -51,6 +51,10 @@
 - {property: 'name', rule: '==', value: 'yarn.resourcemanager.principal'}
 - {property: 'name', rule: '==', value: 'yarn.resourcemanager.resource-tracker.address'}
 - {property: 'name', rule: '==', value: 'yarn.resourcemanager.scheduler.address'}
+- {property: 'name', rule: '=~', value: /^dfs\.namenode\.http-address\./}
+- {property: 'name', rule: '=~', value: /^dfs\.namenode\.https-address\./}
+- {property: 'name', rule: '=~', value: /^dfs\.namenode\.rpc-address\./}
+- {property: 'name', rule: '=~', value: /^dfs\.namenode\.servicerpc-address\./}
 
 # Other examples:
 # Adds all (because matches anything)
